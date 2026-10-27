@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="ParkGo makes finding, booking and paying for parking effortless. Find your perfect parking space in seconds." />
+  <title>ParkGo — Your Perfect Parking Space</title>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar" id="top">
+      <a class="brand" href="#top" aria-label="ParkGo home"><span class="brand-mark">P</span><span>ParkGo</span></a>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation" aria-expanded="false"><i data-lucide="menu"></i></button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a class="nav-link active" href="#top"><i data-lucide="house"></i>Home</a>
+        <a class="nav-link" href="#parking"><i data-lucide="search"></i>Find Parking</a>
+        <a class="nav-link" href="#how-it-works"><i data-lucide="workflow"></i>How It Works</a>
+        <a class="nav-link" href="#business"><i data-lucide="building-2"></i>For Business</a>
+        <button class="nav-link nav-more" id="moreButton"><i data-lucide="ellipsis"></i>More <i data-lucide="chevron-down" class="tiny-chevron"></i></button>
+        <div class="more-menu" id="moreMenu"><a href="#premium">Premium Pass</a><a href="#features">Why ParkGo</a><a href="#footer">Help & support</a></div>
+      </nav>
+      <div class="nav-actions"><button class="icon-button" aria-label="Search" id="quickSearch"><i data-lucide="search"></i></button><button class="icon-button" aria-label="Choose language" id="languageButton"><i data-lucide="globe-2"></i></button><button class="button button-ghost" data-auth="signin">Sign In</button><button class="button button-primary" data-auth="signup">Sign Up</button></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Find parking">
+        <div class="hero-image"></div><div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> PARK SMARTER. LIVE BETTER.</div>
+          <h1>Your Perfect<br />Parking <span>Space.</span></h1>
+          <p class="hero-subtitle">Book. Park. Drive.</p>
+          <div class="search-panel" id="parking">
+            <div class="vehicle-tabs" role="tablist" aria-label="Vehicle type">
+              <button class="vehicle-tab selected" data-vehicle="Car" role="tab" aria-selected="true"><i data-lucide="car-front"></i><span>Car</span></button>
+              <button class="vehicle-tab" data-vehicle="Bike" role="tab" aria-selected="false"><i data-lucide="bike"></i><span>Bike</span></button>
+              <button class="vehicle-tab" data-vehicle="Van" role="tab" aria-selected="false"><i data-lucide="truck"></i><span>Van</span></button>
+              <button class="vehicle-tab" data-vehicle="Bus" role="tab" aria-selected="false"><i data-lucide="bus-front"></i><span>Bus</span></button>
+              <button class="vehicle-tab" data-vehicle="Truck" role="tab" aria-selected="false"><i data-lucide="truck"></i><span>Truck</span></button>
+              <button class="vehicle-tab" data-vehicle="EV" role="tab" aria-selected="false"><i data-lucide="zap"></i><span>EV</span></button>
+            </div>
+            <form class="search-fields" id="parkingForm">
+              <label class="field location-field"><i data-lucide="map-pin"></i><select id="locationSelect" aria-label="Select location" required><option value="">Select location</option><option value="Siliguri, West Bengal">Siliguri, West Bengal</option><option value="Kolkata, West Bengal">Kolkata, West Bengal</option><option value="New Delhi, Delhi">New Delhi, Delhi</option><option value="Bengaluru, Karnataka">Bengaluru, Karnataka</option><option value="Mumbai, Maharashtra">Mumbai, Maharashtra</option><option value="Airport parking">Airport parking</option><option value="Near me">Near me</option></select><i data-lucide="chevron-down" class="field-chevron"></i></label>
+              <label class="field date-field"><i data-lucide="calendar-days"></i><input type="datetime-local" id="dateInput" aria-label="Date and time" required /><i data-lucide="chevron-down" class="field-chevron"></i></label>
+              <button class="button button-primary find-button" type="submit">Find Parking <i data-lucide="arrow-right"></i></button>
+            </form>
+            <div class="search-note"><i data-lucide="shield-check"></i> Free cancellation on most bookings</div>
+          </div>
+        </div>
+        <div class="smart-entry glass-card"><div class="qr-frame"><i data-lucide="qr-code"></i></div><div><strong>Smart Entry</strong><span>Scan · Park · Go</span></div><span class="entry-pulse"></span></div>
+        <div class="hero-bottom-fade"></div>
+      </section>
+
+      <section class="features-strip" id="features" aria-label="ParkGo benefits">
+        <div class="feature-item"><span class="feature-icon blue"><i data-lucide="clock-3"></i></span><span>Real-time<br />Availability</span></div>
+        <div class="feature-item"><span class="feature-icon mint"><i data-lucide="calendar-check"></i></span><span>Instant<br />Booking</span></div>
+        <div class="feature-item"><span class="feature-icon blue"><i data-lucide="credit-card"></i></span><span>Secure<br />Payments</span></div>
+        <div class="feature-item"><span class="feature-icon rose"><i data-lucide="headset"></i></span><span>24/7<br />Access</span></div>
+        <div class="feature-item"><span class="feature-icon blue"><i data-lucide="shield-check"></i></span><span>CCTV<br />Security</span></div>
+        <div class="feature-item"><span class="feature-icon mint"><i data-lucide="zap"></i></span><span>EV<br />Charging</span></div>
+        <div class="feature-item"><span class="feature-icon violet"><i data-lucide="map-pin"></i></span><span>Multiple<br />Locations</span></div>
+        <div class="feature-item"><span class="feature-icon mint"><i data-lucide="calendar-range"></i></span><span>Monthly<br />Pass</span></div>
+        <div class="feature-item"><span class="feature-icon amber"><i data-lucide="briefcase-business"></i></span><span>Corporate<br />Solutions</span></div>
+        <div class="feature-item"><span class="feature-icon blue"><i data-lucide="smartphone"></i></span><span>Mobile<br />App</span></div>
+      </section>
+
+      <section class="section popular-section">
+        <div class="section-heading"><div><p class="section-kicker">FIND YOUR FIT</p><h2>Popular parking</h2></div><div class="carousel-controls"><button class="round-button" id="carouselPrev" aria-label="Scroll parking categories left"><i data-lucide="chevron-left"></i></button><button class="round-button" id="carouselNext" aria-label="Scroll parking categories right"><i data-lucide="chevron-right"></i></button></div></div>
+        <div class="category-track" id="categoryTrack">
+          <button class="category-card" data-category="Car"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=720&q=85" alt="Premium car in a parking garage"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="car-front"></i>Car</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="category-card" data-category="Bike"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=720&q=85" alt="Motorcycle"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="bike"></i>Bike</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="category-card" data-category="Van"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=720&q=85" alt="White utility van"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="truck"></i>Van</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="category-card" data-category="Bus"><img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=720&q=85" alt="Modern passenger bus"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="bus-front"></i>Bus</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="category-card" data-category="Truck"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=720&q=85" alt="Commercial truck"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="truck"></i>Truck</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="category-card" data-category="EV"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=720&q=85" alt="Electric vehicle charging"/><span class="category-gradient"></span><span class="category-label"><i data-lucide="zap"></i>EV Charging</span><span class="category-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </section>
+
+      <section class="promo-grid" id="business">
+        <article class="app-promo promo-card"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=85" alt="Smartphone with a navigation app"/><div class="promo-copy"><p class="section-kicker">PARKING, REIMAGINED</p><h2>Park on the Go</h2><p>Your space is just a tap away.</p><div class="store-buttons"><button class="store-button" data-toast="Google Play app coming soon"><i data-lucide="play"></i><span><small>GET IT ON</small><b>Google Play</b></span></button><button class="store-button" data-toast="App Store app coming soon"><i data-lucide="apple"></i><span><small>Download on the</small><b>App Store</b></span></button></div></div></article>
+        <article class="premium-promo promo-card" id="premium"><div class="gold-orbit"></div><span class="crown-icon"><i data-lucide="crown"></i></span><p class="section-kicker">MORE PERKS. LESS HASSLE.</p><h2>Premium Pass</h2><p class="premium-desc">For the way you move.</p><div class="premium-perks"><span><i data-lucide="car-front"></i></span><span><i data-lucide="zap"></i></span><span><i data-lucide="ticket-percent"></i></span><span><i data-lucide="calendar-days"></i></span></div><button class="gold-arrow" id="premiumButton" aria-label="Explore Premium Pass"><i data-lucide="arrow-right"></i></button></article>
+        <article class="nearby-promo promo-card"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=900&q=85" alt="Aerial view of a parking area"/><div class="map-pins"><span> P </span><span> P </span><span> P </span></div><div class="nearby-footer"><span><i data-lucide="map-pin"></i> Nearby Parking</span><button id="nearbyButton" aria-label="Explore nearby parking"><i data-lucide="navigation"></i></button></div></article>
+        <article class="nearby-list" aria-label="Nearby parking suggestions"><button class="nearby-row" data-lot="Central Plaza Parking"><img src="https://images.unsplash.com/photo-1506523866007-3a6a3b8f9f25?auto=format&fit=crop&w=180&q=80" alt="Parking lot"/><span><b>Central Plaza</b><small>2 min away · ₹40/hr</small></span><i data-lucide="chevron-right"></i></button><button class="nearby-row" data-lot="City Centre Garage"><img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&w=180&q=80" alt="Parking garage"/><span><b>City Centre</b><small>5 min away · ₹30/hr</small></span><i data-lucide="chevron-right"></i></button><button class="nearby-row" data-lot="Riverside Parking"><img src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?auto=format&fit=crop&w=180&q=80" alt="Outdoor parking"/><span><b>Riverside</b><small>8 min away · ₹25/hr</small></span><i data-lucide="chevron-right"></i></button></article>
+      </section>
+
+      <section class="bottom-grid" id="how-it-works"><div class="stats-grid"><article class="stat-card"><span class="stat-icon mint"><i data-lucide="users-round"></i></span><div><strong>1M+</strong><span>Drivers</span></div></article><article class="stat-card"><span class="stat-icon blue"><i data-lucide="parking-square"></i></span><div><strong>500+</strong><span>Locations</span></div></article><article class="stat-card"><span class="stat-icon blue"><i data-lucide="shield-check"></i></span><div><strong>99.9%</strong><span>Secure</span></div></article><article class="stat-card"><span class="stat-icon amber"><i data-lucide="star"></i></span><div><strong>4.8</strong><span>Rating</span></div></article></div><button class="video-card" id="videoButton"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85" alt="" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85'"/><span class="video-shade"></span><span class="play-button"><i data-lucide="play"></i></span><span class="video-caption"><b>Watch how it works</b><small>Parking made beautifully simple</small></span></button></section>
+
+      <section class="how-section section"><div class="how-intro"><p class="section-kicker">THREE SIMPLE STEPS</p><h2>From search to parked<br/><span>in no time.</span></h2><p>Skip the circling. Get where you're going with a space waiting for you.</p><a href="#parking" class="text-link">Find your space <i data-lucide="arrow-up-right"></i></a></div><div class="steps"><article class="step-card"><span class="step-number">01</span><span class="step-icon"><i data-lucide="map-pinned"></i></span><h3>Find your spot</h3><p>Search by destination, choose your vehicle, and compare nearby spaces.</p></article><article class="step-card"><span class="step-number">02</span><span class="step-icon"><i data-lucide="calendar-check-2"></i></span><h3>Book in seconds</h3><p>Reserve ahead with transparent pricing and secure checkout.</p></article><article class="step-card"><span class="step-number">03</span><span class="step-icon"><i data-lucide="scan-line"></i></span><h3>Arrive and go</h3><p>Use your booking QR code for a smooth, contactless entry.</p></article></div></section>
+
+      <section class="business-banner"><div><p class="section-kicker">FOR PROPERTY OWNERS & OPERATORS</p><h2>Turn empty spaces into<br/>new opportunities.</h2><p>Manage capacity, simplify access, and grow your parking revenue with ParkGo.</p></div><button class="button button-light" id="businessButton">Explore business solutions <i data-lucide="arrow-up-right"></i></button></section>
+    </main>
+
+    <footer class="footer" id="footer"><a class="brand" href="#top"><span class="brand-mark">P</span><span>ParkGo</span></a><p>Make room for what matters.</p><div class="footer-links"><a href="#features">About</a><a href="#how-it-works">How it works</a><a href="#business">For business</a><button id="supportButton">Support</button><a href="#footer">Privacy</a></div><span class="copyright">© <span id="year"></span> ParkGo Technologies. All rights reserved.</span></footer>
+    </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close dialog"><i data-lucide="x"></i></button><div class="modal-brand"><span class="brand-mark">P</span></div><p class="section-kicker" id="modalKicker">WELCOME TO PARKGO</p><h2 id="modalTitle">Welcome back.</h2><p class="modal-subtitle" id="modalSubtitle">Sign in to manage your bookings and saved spaces.</p><form id="authForm"><label class="modal-label">Email address<input type="email" id="emailInput" placeholder="you@example.com" required /></label><label class="modal-label">Password<input type="password" id="passwordInput" placeholder="At least 8 characters" minlength="8" required /></label><button class="button button-primary modal-submit" id="authSubmit" type="submit">Sign In <i data-lucide="arrow-right"></i></button></form><p class="modal-switch" id="modalSwitch">New to ParkGo? <button data-auth="signup">Create an account</button></p><p class="modal-legal">By continuing, you agree to our Terms of Service and Privacy Policy.</p></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="check-circle-2"></i><span id="toastMessage">You're all set.</span></div>
+  <div class="results-drawer" id="resultsDrawer" aria-live="polite"><div class="drawer-header"><div><p class="section-kicker">YOUR PARKING OPTIONS</p><h2 id="resultsTitle">Spaces near you</h2><p id="resultsSubtitle">Available parking for your trip</p></div><button class="round-button" id="resultsClose" aria-label="Close results"><i data-lucide="x"></i></button></div><div class="results-list" id="resultsList"></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
